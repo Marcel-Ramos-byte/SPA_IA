@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+header{
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+.header {
+    height: 100px;
+    align-items: center;
+    display: flex;
+    max-width: 1140px;
+    margin: auto;
+}
+
+
+.logo {
+    width: 100px;    
+    color: #000;
+    display:flex;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 35px;
+    font-family: Saira Stencil One;
+    background-color: #fff;
+}
+
+.menu ul, .menu li {
+    list-style: none;
+}
+
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    padding-left:10px;
+    padding-right:10px;
+    height:100px;
+    display:flex;
+    align-items:center;
+    border-bottom:3px solid #fff;    
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    align-items: center;
+}
+
+.coluna2 img {
+    object-fit: contain;
+    height: calc(100vh - 100px);
+    border-radius: 50%;
+}
+
+.coluna1, .coluna3,.coluna2 {
+    font-size: 50px;
+    color: white;
+    flex: 1;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.canvas {
+    display: block;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.banner > div{
+    position: relative;
+    z-index: 1;
+}
+
+.About {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 25px;
+}
+
+.subtitle {
+    color: rgb(46, 49, 240);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.title {
+    color: #ccc;
+    font-size: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.aboutbody {
+    box-sizing: border-box;
+    display: flex;;
+}
+
+.aboutbody-left {
+    color: white;
+    padding: 5px;
+    flex: 1;
+    font-size: 14px;
+}
+
+.aboutbody-right {
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    width: 520px;
+    object-fit: contain;
+    height: 100px;
+}

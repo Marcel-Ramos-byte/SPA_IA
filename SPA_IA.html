@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcel Ramos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">PSR</div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="">Home</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Projects</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Contact</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+           <canvas id="background"></canvas>
+           <div class="coluna1">SOFTWARE</div>
+           <div class="coluna2">
+               <img class="photo-hero" src="images/hero.jpg" />
+           </div>
+           <div class="coluna3">DEVELOPER</div>
+       </section>
+            <script>
+                const canvas = document.getElementById('background');
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                let lines = []; 
+                const lineCount = 10;  
+                const lineSpacing = canvas.width / lineCount;  
+                const speed = 0.02; 
+                let time = 0; 
+                for (let i = 0; i <= lineCount; i++) {lines.push({ x: i * lineSpacing, amplitude: Math.random() * 50 + 30, 
+                frequency: Math.random() * 0.02 + 0.01 });}
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.strokeStyle = 'blue'; ctx.lineWidth = 2;
+                    lines.forEach(line => { ctx.beginPath(); for (let y = 0; y <= canvas.height; y += 10) { const wave = Math.sin((y * line.frequency) + time) * line.amplitude; ctx.lineTo(line.x + wave, y);} ctx.stroke(); });
+                    time += speed; requestAnimationFrame(animate);
+                }
+                animate();
+                window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+            </script>
+
+            
+        <section class="About">
+            <div class="title">About us</div>
+            <div class="subtitle">Who we are?</div>
+            <div class="aboutbody">
+                <div class="aboutbody-left">
+                    <p>
+                        I am Marcel Ramos, industrial technician, nowadays studying computer science just for fun.
+                        I am here calling me as "us" because nobody knows how the future will be, someday I may be with
+                        someone's collaboration and this website might grow. but for a while it's just distraction
+                        and training. I've already taken frontend courses from B7web like HTMl, CSS, Javascript,
+                        ReactJs,
+                        Typescript, TailwindCss and also Git/Github tools. Sumarizng thats it, It will be updating and
+                        contantly changing for the next 4years. I hope you enjoy and please feel free to send messages
+                        and opinions, I'd be happy to know what I can improve and what is already good.
+                    </p>
+                </br>
+                <p>
+                    Eu sou Marcel Ramos, técnico indstrial atualmente estudo ciencia da computação só por diversão.
+                    estou aqui me chamando como "nós" porque ninguem sabe como vai ser o futuro, algum dia eu posso
+                    estar aqui com a colaboração de mais alguem e isso pode até crescer. mas por enquanto é
+                    distração e treino. Eu já fiz cursos de frontend pela B7web de HTMl, CSS, Javascript, ReactJs,
+                    Typescript, TailwindCss e tambem ferramenta de versionamento Git/Github. de forma resumida é
+                    isso
+                    vou fazer muitas atualizações e essa URL vai estar em constante transformação pelos proximos
+                    4anos.
+                    espero que voce goste e caso sinta-se a vontade deixe sua opiniao, vou gostar de saber onde
+                    posso
+                    melhorar e oque já está legal
+                </p>
+                </div>
+                <div class="aboutbody-right">
+                    <img src="images/background.webp">
+                    
+                </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
